@@ -38,10 +38,7 @@ export const Navbar = () => {
             ))}
           </ul>
 
-          {/* Theme Switch */}
-          <NavbarItem>
-            <ThemeSwitch />
-          </NavbarItem>
+        
         </div>
       </NavbarContent>
     </NextUINavbar>
