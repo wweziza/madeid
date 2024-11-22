@@ -29,7 +29,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -40,18 +39,18 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen flex flex-col bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen">
-            <Navbar />
+        <div className="flex-grow">
+          <Navbar />
+          <div className="space-y-16"> 
             <Home />
-            <ListHouse/>
-            <Footer />
+            <ListHouse />
           </div>
-        </Providers>
+        </div>
+        <Footer />
       </body>
     </html>
   );
